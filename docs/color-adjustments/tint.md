@@ -37,10 +37,10 @@ image.src = url;
 
 //waiting image load
 image.onload = () => {
-
+    // change image tint
     editpix.changeTint(image, 80)
         .then(resultImage => {
-            document.body.appendChild(image);
+            // render modified image
             document.body.appendChild(resultImage);
         })
         .catch(error => { console.log(error) })

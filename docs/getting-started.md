@@ -4,25 +4,28 @@ sidebar_position: 1
 
 # Getting Started
 
-# Installation
+## Installation
 
-EditPix supports multiple different installation paths
+EditPix supports multiple different installation methods.
 
-## Using in the browser
 
-### Install with npm
+## Usage in the browser 
+For use in the browser the library can be installed via [npm](#installing-from-npm) or loaded via [CDN](#loading-from-a-cdn).
+
+
+### Installing from `npm` 
 
 ```bash
 npm i editpix
 ```
 
-In your HTML file load the script as a module:
+In your HTML file, load the script as a module:
 
 ```html
 <script type="module" src="example.js"></script>
 ```
 
-In your JavaScript file:
+In your JavaScript file, import the library and use it:
 
 ```jsx
 import EditPix from './node_modules/editpix/src/editpix.js';
@@ -31,16 +34,15 @@ const editpix = new Editpix();
 
 // use library
 ```
+### Loading from a CDN
 
-### Load from CDN
-
-In your HTML file load the script as a module:
+In your HTML file, load the script as a module:
 
 ```html
 <script type="module" src="example.js"></script>
 ```
 
-In your JavaScript file:
+In your JavaScript file, import the library from the CDN and use it:
 
 ```jsx
 import EditPix from 'https://cdn.jsdelivr.net/npm/editpix/+esm';
@@ -50,21 +52,22 @@ const editpix = new Editpix();
 // use library
 ```
 
-You can also choose the version of the library you prefer by specifying it in the URL
+
+You can also choose the version of the library you prefer by specifying it in the URL:
 
 ```jsx
 import EditPix from 'https://cdn.jsdelivr.net/npm/editpix@[version]/+esm';
 ```
 
-## Using with Vue.js
+## Usage in Vue.js
 
-### Install with npm
+ Installing from `npm`
 
 ```bash
 npm i editpix
 ```
 
-### Import and use in your component
+Import and use in your component:
 
 ```jsx
 <script setup>

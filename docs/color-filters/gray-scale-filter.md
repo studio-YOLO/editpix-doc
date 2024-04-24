@@ -36,7 +36,7 @@ image.onload = () => {
     // convert image to gray scale
     editpix.toGrayScale(image)
         .then(greyScaleImage => {
-		        // render modified image
+            // render modified image
             document.body.appendChild(greyScaleImage);
         })
         .catch(error => { console.log(error) })

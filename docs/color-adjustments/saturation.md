@@ -37,10 +37,10 @@ image.src = url;
 
 // waiting image load
 image.onload = () => {
-		// change image saturation
+    // change image saturation
     editpix.changeSaturation(image, 20)
         .then(resultImage => {
-		        // render modified image
+            // render modified image
             document.body.appendChild(resultImage);
         })
         .catch(error => { console.log(error) })

@@ -3,21 +3,22 @@ sidebar_position: 2
 ---
 
 # Black and white
-Function that, given an image, returns it in gray scale.
+
+Function for transforming an RGB image to black and white.
 
 ## Syntax
 
 ```jsx
-toGrayScale(image)
+toBlackWhite(image)
 ```
 
 ## Parameters
 
-- image: the image to be converted to gray scale
+- image: the image to be converted to black and white
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the gray scale image
+- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the Black and White image
 
 ## Examples
 
@@ -33,11 +34,11 @@ image.src = url;
 
 // waiting image load
 image.onload = () => {
-    // convert image to gray scale
-    editpix.toGrayScale(image)
-        .then(greyScaleImage => {
-		        // render modified image
-            document.body.appendChild(greyScaleImage);
+    // convert image to black and white
+    editpix.toBlackWhite(image)
+        .then(blackWhiteImage => {
+            // render modified image
+            document.body.appendChild(blackWhiteImage);
         })
         .catch(error => { console.log(error) })
 };

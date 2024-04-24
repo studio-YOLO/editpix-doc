@@ -37,10 +37,10 @@ image.src = url;
 
 // waiting image load
 image.onload = () => {
-		// change image contrast
-    editpix.setContrast(image, 2)
+    // change image contrast
+    editpix.changeContrast(image, 2)
         .then(resultImage => {
-		        // render modified image
+            // render modified image
             document.body.appendChild(resultImage);
         })
         .catch(error => { console.log(error) })

@@ -37,10 +37,10 @@ image.src = url;
 
 //waiting image load
 image.onload = () => {
-		//change brightness of image
+    //change brightness of image
     editpix.changeBrightness(image, -90)
         .then(resultImage => {
-		        // render modified image
+            // render modified image
             document.body.appendChild(resultImage);
         })
         .catch(error => { console.log(error) })

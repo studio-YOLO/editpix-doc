@@ -37,11 +37,12 @@ image.src = url;
 
 // waiting image load
 image.onload = () => {
-		// change image temperature
+    // change image temperature
     editpix.adjustTemperature(image, 20)
         .then(resultImage => {
-		        // render modified image
+            // render modified image
             document.body.appendChild(resultImage);
         })
         .catch(error => { console.log(error) })
+}
 ```

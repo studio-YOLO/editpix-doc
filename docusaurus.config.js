@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Studio - YOLO', // Usually your GitHub org/user name.
+  projectName: 'editpix-doc', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -39,12 +39,15 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        theme: {
+          customCss: ["./src/css/custom.css"]
+        },
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/studio-YOLO/editpix-doc/tree/main/',
         },
      
       }),
@@ -55,19 +58,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'EditPix',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'EditPix Logo',
+          src: 'img/editpix-logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/studio-YOLO/editpix',
@@ -83,8 +84,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Docs',
+                to: '/docs/getting-started',
               },
             ],
           },
@@ -115,6 +116,18 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/studio-YOLO/editpix',
+              },
+              {
+                label: 'Studio - YOLO',
+                href: 'https://github.com/studio-YOLO',
+              },
+              {
+                label: 'npm',
+                href: 'https://www.npmjs.com/package/editpix',
+              },
+              {
+                label: 'jsDelivr',
+                href: 'https://www.jsdelivr.com/package/npm/editpix',
               },
             ],
           },

@@ -33,10 +33,11 @@ image.src = url;
 
 // waiting image load
 image.onload = () => {
-    // convert image sepia
+    // convert image to sepia
     editpix.toSepia(image)
         .then(sepiaImage => {
-            document.body.appendChild(SepiaImage);
+            // render modified image
+            document.body.appendChild(sepiaImage);
         })
         .catch(error => { console.log(error) })
 };
