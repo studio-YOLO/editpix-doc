@@ -3,39 +3,39 @@ import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
-  /*{
+  {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/features/undraw_proud_coder.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        EditPix was designed to be simple to use and obtain the desired result in a few simple steps.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Works directly in the browser',
+    Svg: require('@site/static/img/features/undraw_website_setup.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        EditPix does not require the use of Node.js, making the library easy to integrate into your front-end.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Usable with Vue and React',
+    Svg: require('@site/static/img/features/undraw_javascript_frameworks.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        You can use EditPix with most front-end frameworks, including Vue and React.
       </>
     ),
-  },*/
+  },
 ];
 
-function Feature({Svg, title, description}) {
+
+
+
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
