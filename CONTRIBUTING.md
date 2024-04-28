@@ -1,4 +1,4 @@
-# Contributing to EditPix
+# Contributing to EditPix-doc
 
 Thank you for your interest in contributing to **EditPix-doc**! We welcome contributions from the community to help improve and grow the project. This document outlines the guidelines and steps for contributing.
 
