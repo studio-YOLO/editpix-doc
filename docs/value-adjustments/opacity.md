@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 
 # Opacity
-Function that, given an image, changes its opacity by a given alpha factor.
+This method asynchronously changes the opacity of the specified image element by setting the alpha channel (transparency) to a specified value for all pixels. 
 
 ## Syntax
 
@@ -13,14 +13,24 @@ changeOpacity(image, alpha)
 
 ## Parameters
 
-- image: the image to be modified
-- alpha: opacity factor, it must be a integer value fro 0 to 255
-    - alpha = 0: the image is completely transparent.
-    - alpha = 255: the image is completely opaque.
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the opacity of.
+
+- **alpha** : `number` <br/>
+The new alpha value (opacity) to set for all pixels (0 to 255).
+    - alpha = 255: the image is completely transparent.
+    - alpha = 0: the image is completely opaque.
+
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image with the opacity changed by alpha
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted opacity.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified opacity factor is outside the valid range.
 
 ## Examples
 

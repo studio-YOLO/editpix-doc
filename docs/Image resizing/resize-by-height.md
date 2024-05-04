@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Resize by height
 
-Resize the image by height. 
+Asynchronously resizes an image to a specified height.
 
 This feature resizes also the width of the image proportionally, without distorting it.
 
@@ -16,12 +16,21 @@ resizeByHeight(image, heightPx)
 
 ## Parameters
 
-- image: the image that needs to be resized
-- heightPx: the new height expressed in pixels (px)
+- **image** : `HTMLImageElement` <br/>
+The image element to resize.
+
+- **heightPx** : `number` <br/>
+The new height, in pixels, to resize the image to.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the image resized
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the resized image element.
+
+## Throws
+
+- `Error` <br/>
+Thrown if the specified height is negative or if there are errors during the resizing process.
 
 ## Examples
 

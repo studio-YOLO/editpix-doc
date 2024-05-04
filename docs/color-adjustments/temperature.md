@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # Temperature
-Function that, given an image, changes the temperature.
+This method asynchronously changes the temperature of the specified image element by applying a temperature adjustment factor.
 
 ## Syntax
 
@@ -13,15 +13,24 @@ changeTemperature(image, factor)
 
 ## Parameters
 
-- image: image whose temperature needs to be changed
-- factor: factor by which to increase or decrease the image temperature. Its value ranges from -100 to 100, where:
-    - factor > 0 : the image is heated
-    - factor < 0: the image is cooled
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the temperature of.
+
+- **factor** : `number` <br/>
+The temperature adjustment factor (-100 to 100):
+    - factor > 0: the image towards warmer tones.
+    - factor < 0: the image towards cooler tones.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the image with the temperature changed by a factor
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted temperature.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified temperature factor is outside the valid range.
 
 ## Examples
 

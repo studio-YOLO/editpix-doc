@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Functions for apply filters on image."
+    "description": "Some image conversion tools for applying filters to images."
   }
 }

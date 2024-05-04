@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Sharpness
 
-Function that, given an RGB image and a factor, returns an RGB image sharpened by the factor.
+This method asynchronously changes the sharpness of the specified image element.
 
 ## Syntax
 
@@ -14,15 +14,24 @@ changeSharpness(image, factor)
 
 ## Parameters
 
-- image: the image to modify
-- factor: factor of sharpness change (from -100 to 100)
-    - factor > 0 : the image gets sharpened by the factor
-    - factor < 0: the image gets dulled by the factor
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the sharpness of.
+
+- **factor** : `number` <br/>
+The sharpness adjustment factor (-100 to 100):
+    - factor > 0: the image sharpness gets increased by the factor.
+    - factor < 0: the image sharpness gets decreased by the factor.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image modified  by the highlight factor
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted sharpness.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified sharpness factor is outside the valid range.
 
 ## Examples
 

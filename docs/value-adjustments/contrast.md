@@ -13,15 +13,24 @@ changeContrast(image, factor)
 
 ## Parameters
 
-- image: the image to modify
-- factor: factor of contrast (from -100 to 100)
-    - factor > 0 : the image contrast gets increased by the factor
-    - factor < 0: the image contrast gets decreased by the factor
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the contrast of.
+
+- **factor** : `number` <br/>
+The contrast adjustment factor (-100 to 100):
+    - factor > 0: the image contrast gets increased by the factor.
+    - factor < 0: the image contrast gets decreased by the factor.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image modified  by the factor of contrast
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted contrast.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified contrast factor is outside the valid range.
 
 ## Examples
 

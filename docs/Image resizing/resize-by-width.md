@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Resize by width
 
-Resize the image by width. 
+Asynchronously resizes an image to a specified width.
 
 This feature resizes also the height of the image proportionally, without distorting it.
 
@@ -16,12 +16,21 @@ resizeByWidth(image, widthPx)
 
 ## Parameters
 
-- image: the image that needs to be resized
-- widthPx: the new width expressed in pixels (px)
+- **image** : `HTMLImageElement` <br/>
+The image element to resize.
+
+- **widthPx** : `number` <br/>
+The new width, in pixels, to resize the image to.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the image resized
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the resized image element.
+
+## Throws
+
+- `Error` <br/>
+Thrown if the specified width is negative or if there are errors during the resizing process.
 
 ## Examples
 

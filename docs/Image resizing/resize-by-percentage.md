@@ -4,7 +4,8 @@ sidebar_position: 3
 
 # Resize by percentage
 
-Resize the image in percentage.
+Asynchronously resizes an image by a specified percentage.
+
 This feature resizes the height and width of the image based on the percentage value you enter.
 
 ## Syntax
@@ -15,12 +16,21 @@ resizeByPercentage(image, percentage)
 
 ## Parameters
 
-- image: the image that needs to be resized
-- percentage: a value from 0 to 100 that represents the percentage by which to reduce the size of the image
+- **image** : `HTMLImageElement` <br/>
+The image element to resize.
+
+- **percentage** : `number` <br/>
+The percentage by which to resize the image. Positive values enlarge the image, while negative values shrink it.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the image resized
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the resized image element.
+
+## Throws
+
+- `Error` <br/>
+Thrown if there are errors during the resizing process.
 
 ## Examples
 

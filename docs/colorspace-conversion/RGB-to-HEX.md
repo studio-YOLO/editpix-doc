@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # RGB to HEX
 
-A function to convert to the HEX color space from RGB.
+This method converts the specified RGB color values to a hexadecimal color representation. 
 
 ## Syntax
 
@@ -14,13 +14,21 @@ rgbToHex(r, g, b)
 
 ## Parameters
 
-- r: the red value contained in [0, 255]
-- g: the green value contained in [0, 255]
-- b: the blue value contained in [0, 255]
+- **r** : `number` <br/>
+The red channel value (0-255).
+- **g** : `number` <br/>
+The green channel value (0-255).
+- **b** : `number` <br/>
+The blue channel value (0-255).
 
 ## Return
 
-- Returns the HEX value of the color in string format
+- `String` <br/>
+The hexadecimal representation of the RGB color with the format "#RRGGBB".
+
+## Throws
+- `Error` <br/>
+Thrown if the input RGB color values are invalid.
 
 ## Examples
 

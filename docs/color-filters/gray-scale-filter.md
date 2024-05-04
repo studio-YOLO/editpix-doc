@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Gray Scale
-Function that, given an image, returns it in gray scale.
+This method asynchronously converts the specified image element to grayscale.
 
 ## Syntax
 
@@ -13,11 +13,18 @@ toGrayScale(image)
 
 ## Parameters
 
-- image: the image to be converted to gray scale
+- **image** : `HTMLImageElement` <br/> 
+The image element to convert to grayscale.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the gray scale image
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the grayscale image element.
+
+## Throws
+
+- `Error` <br/>
+Thrown if there are errors during the conversion process.
 
 ## Examples
 
