@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Saturation
-Function that, given an image, changes its saturation.
+This method asynchronously changes the saturation of the specified image element by applying a saturation adjustment factor. 
 
 ## Syntax
 
@@ -13,15 +13,24 @@ changeSaturation(image, factor)
 
 ## Parameters
 
-- image: RGB image to saturate
-- factor: factor by which to increase or decrease the saturation. Its value ranges from -100 to 100, where:
-    - factor > 0 : the saturation gets increased by the factor
-    - factor < 0: the saturation gets decreased by the factor
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the saturation of.
+
+- **factor** : `number` <br/>
+The saturation adjustment factor (-100 to 100):
+    - factor > 0: the saturation gets increased by the factor.
+    - factor < 0: the saturation gets decreased by the factor.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image saturated by a factor alpha
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted saturation.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified saturation factor is outside the valid range.
 
 ## Examples
 

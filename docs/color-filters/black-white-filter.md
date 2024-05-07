@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Black and white
 
-Function for transforming an RGB image to black and white.
+This method asynchronously converts the specified image element to black and white.
 
 ## Syntax
 
@@ -14,11 +14,18 @@ toBlackWhite(image)
 
 ## Parameters
 
-- image: the image to be converted to black and white
+- **image** : `HTMLImageElement` <br/> 
+The image element to convert to black and white.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the Black and White image
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the black and white image element.
+
+## Throws
+
+- `Error` <br/>
+Thrown if there are errors during the conversion process.
 
 ## Examples
 

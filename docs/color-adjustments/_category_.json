@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Adjust image color."
+    "description": "Collection of image processing tools that allow you to manipulate the color properties of an image."
   }
 }

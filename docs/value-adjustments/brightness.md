@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Brightnes
-Function that, given an image and a value, changes the brightness by the value.
+his method asynchronously changes the brightness of the specified image element by applying a brightness adjustment factor. 
 
 ## Syntax
 
@@ -13,15 +13,24 @@ changeBrightness(image, factor)
 
 ## Parameters
 
-- image: the image to modify
-- factor: brightness change factor (from -100 to 100)
-    - factor > 0 : the image luminance gets increased by the factor
-    - factor < 0: the image luminance gets decreased by the factor
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the brightness of.
+
+- **factor** : `number` <br/>
+The brightness adjustment factor (-100 to 100):
+    - factor > 0: the image luminance gets increased by the factor.
+    - factor < 0: the image luminance gets decreased by the factor.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image with the changed factor
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted brightness.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified brightness factor is outside the valid range.
 
 ## Examples
 

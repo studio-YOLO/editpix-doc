@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # Exposure
-Function that, given an image and a value, changes its exposure by the value.
+This method asynchronously changes the exposure of the specified image element by applying an exposure adjustment factor to each RGB channel of every pixel. 
 
 ## Syntax
 
@@ -13,15 +13,24 @@ changeExposure(image, factor)
 
 ## Parameters
 
-- image: the image to modify
-- factor: exposure change factor (from -100 to 100)
-    - factor > 0 : the image exposure gets increased by the factor
-    - factor < 0: the image exposure gets decreased by the factor
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the exposure of.
+
+- **factor** : `number` <br/>
+The exposure adjustment factor (-100 to 100):
+    - factor > 0: the image exposure gets increased by the factor.
+    - factor < 0: the image exposure gets decreased by the factor.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image with the changed factor
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted exposure.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified exposure factor is outside the valid range.
 
 ## Examples
 

@@ -14,15 +14,24 @@ changeHighlights(image, factor)
 
 ## Parameters
 
-- image: the image to modify
-- factor: factor of highlight change (from -100 to 100)
-    - factor > 0 : the image highlights get brightened by the factor
-    - factor < 0: the image highlights get darkened by the factor
-    - factor = 0: the image does not change
+- **image** : `HTMLImageElement` <br/> 
+The image element to change the highlights of.
+
+- **factor** : `number` <br/>
+The highlights adjustment factor (-100 to 100):
+    - factor > 0: the image highlights gets increased by the factor.
+    - factor < 0: the image highlights gets decreased by the factor.
+    - factor = 0: the image does not change.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the RGB image modified  by the highlight factor
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the image element with adjusted highlights.
+
+## Throws
+
+- `Error` <br/>
+ Thrown if the specified highlights factor is outside the valid range.
 
 ## Examples
 

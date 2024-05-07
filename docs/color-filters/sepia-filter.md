@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # Sepia
-Function that, given an image, returns it in sepia scale
+This method asynchronously converts the specified image element to sepia tone.
 
 ## Syntax
 
@@ -13,11 +13,18 @@ toSepia(image)
 
 ## Parameters
 
-- image: the image to be converted to sepia
+- **image** : `HTMLImageElement` <br/> 
+The image element to convert to sepia tone.
 
 ## Return
 
-- Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) with the sepia image
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) : `Promise<HTMLImageElement>` <br/>
+A promise that resolves with the sepia-toned image element.
+
+## Throws
+
+- `Error` <br/>
+Thrown if there are errors during the conversion process.
 
 ## Examples
 
